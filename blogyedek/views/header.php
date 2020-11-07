@@ -67,7 +67,7 @@
                         <nav>
                             <ul>
                                 <li><a href="<?php echo URL;; ?>">Ana Sayfa</a></li>
-                                <li><a href="<?php echo URL;; ?>">Fotoğraflar</a></li>
+                                <li><a href="<?php echo URL;; ?>/kayit">Kayıt</a></li>
                                 <li><a href="<?php echo URL;; ?>">Hakkımızda</a></li>
                                 <li><a href="<?php echo URL;; ?>">Projeler</a></li>
                                 <li><a href="<?php echo URL;; ?>">İletişim</a></li>

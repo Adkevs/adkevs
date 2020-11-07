@@ -4,7 +4,7 @@
 
         function __construct () {
 
-          $this->database= new database();
+          $this->db= new database();
         }
 
     }

@@ -4,8 +4,14 @@
 
         function __construct () {
 
+            parent::__construct();
 
-            echo    "Merhaba Kayıt";
+        }
+
+        function kontrolet($tabload,$sutunlarim,$veri) {
+
+
+            return $this->db->ekle($tabload,$sutunlarim,$veri);
 
 
         }
