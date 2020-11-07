@@ -21,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/sayfalar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -30,11 +30,11 @@
       <recent name="$PROJECT_DIR$/views/index" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/lbs" />
       <recent name="$PROJECT_DIR$/views/sayfalar" />
       <recent name="$PROJECT_DIR$/views/tema" />
       <recent name="$PROJECT_DIR$/controllers" />
-      <recent name="$PROJECT_DIR$/model" />
-      <recent name="$PROJECT_DIR$/lbs" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -113,10 +113,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1878" height="376" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1603617618015" />
-    <state x="1371" y="470" key="NewPhpFileDialog" timestamp="1604695055877">
+    <state x="1371" y="470" key="NewPhpFileDialog" timestamp="1604761050828">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1371" y="470" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1604695055877" />
+    <state x="1371" y="470" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1604761050828" />
     <state x="938" y="179" key="SettingsEditor" timestamp="1602325512013">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

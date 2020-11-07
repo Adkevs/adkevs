@@ -1,20 +1,19 @@
 <?php
-
-spl_autoload_register(function ($classname)
-
+// bu otomatik olarak tüm dosyaları dahil edecektir.
+spl_autoload_register(function ($className)
 {
-
-    $dir=__DIR__.'/lbs/';
-    $dosyayolu=$dir.$classname.'.php';
-
-    include ($dosyayolu);
+	$dosyayolu=__DIR__.'/libs/'.$className.'.php';	
+	include($dosyayolu);	
 });
 
+require 'config/genel.php';
+require 'config/database.php';
 
-require "config/genel.php";
-require "config/database.php";
+$boots= new boots;
+		
+		
+	
+	
 
-
-$boots= new boots();
 
 ?>

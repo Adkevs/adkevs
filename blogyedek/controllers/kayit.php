@@ -1,34 +1,119 @@
 <?php
 
-    class kayit extends controllers {
+class kayit extends Controller  {
+	
+	
+	function __construct() {
+		parent::__construct();
+	
+	$this->Modelyukle('kayit');
+		
+	}	
+	
+	function kayitekle() {
+	$this->view->goster("form/index");	
+	}	
+	
+	function kontrol() {		
+	$ad=$this->form->get("ad")->bosmu();
+	$soyad=$this->form->get("soyad")->bosmu();
+	$yas=$this->form->get("yas")->bosmu();
+	
+	if (!empty($this->form->error)) :
+	// bir hata var demektir.
 
-        function __construct () {
+	$this->view->goster("form/sonuc",
+	$this->form->error,
+	$this->bilgi->hata(false,"/kayit/kayitekle"));
+	else:
+	
+$sonuc=$this->model->kontrolet("kullanicilar",array("ad","soyad","yas"),array($ad,$soyad,$yas));
+	
+$this->view->goster("form/sonuc",$sonuc);
+	
+	
+	endif;
+		
+	}
+	
+	function listele() {
 
-            parent::__construct();
+	$sonuc=$this->model->listeleme("kullanicilar","order by id desc");
+	$this->view->goster("form/listele",$sonuc);		
+	
+	}
+	
+	function kayitsil($id) {
 
-            $this->view->goster("sayfalar/kayit");
+	$sonuc=$this->model->silme("kullanicilar","id=".$id);
+	$this->view->goster("form/sonuc",$sonuc);		
+	
+	}
+	
+	function kayitguncelle($id) {
 
-            $this->Modelyukle("kayit");
-
-        }
-        function kontrol () {
-
-            $ad=$_POST["ad"];
-            $soyad=$_POST["soyad"];
-            $yas=$_POST["yas"];
-
-
-       $sonuc=$this->model->kontrolet("kullanicilar",array("ad","soyad","yas"),array($ad,$soyad,$yas));
-
-            $this->view->mesaj=$sonuc;
-            $this->view->goster("sayfalar/sonuc");
-        }
-
-
+	$sonuc=$this->model->listeleme("kullanicilar","where id=".$id);
+	$this->view->goster("form/guncelle",$sonuc);		
+	
+	}
+	
+	
+	function guncelleson() {
+			
+			
+	$ad=$this->form->get("ad")->bosmu();
+	$soyad=$this->form->get("soyad")->bosmu();
+	$yas=$this->form->get("yas")->bosmu();
+	$id=$this->form->get("kayitid")->bosmu();
+	
+	if (!empty($this->form->error)) :
 
 
+	$this->view->goster("form/sonuc",$this->form->error);
+	else:
+	
+	$sonuc=$this->model->kayitguncel("kullanicilar",array("ad","soyad","yas"),array($ad,$soyad,$yas),"id=".$id);
+	
+	$this->view->goster("form/sonuc",$sonuc);	
+	
+	endif;		
 
-    }
+	}
+	
+	function arama() {
+		
+	$kelime=$this->form->get("kelime")->bosmu();
+	
+	
+	
+	if (!empty($this->form->error)) :
+
+	$this->view->goster("form/sonuc",$this->form->error);
+	else:
+	
+	$sonuc=$this->model->kayitarama("kullanicilar","ad LIKE '%".$kelime."%' or soyad LIKE '%".$kelime."%'");
+	
+	$this->view->goster("form/listele",$sonuc);	
+	
+	endif;	
+	
+		
+	
+	
+	
+		
+	}
+	
+	
+	
+	
+	
+
+	
+
+	
+}
+
 
 
 
